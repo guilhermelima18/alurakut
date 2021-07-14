@@ -1,0 +1,22 @@
+.communities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  padding: 20px 0;
+}
+
+.communities .community {
+  width: 85%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.communities .community img {
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0.9;
+}

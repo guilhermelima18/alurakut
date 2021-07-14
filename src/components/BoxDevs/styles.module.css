@@ -1,0 +1,36 @@
+.devs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  padding: 20px 0;
+}
+
+.devs .dev {
+  width: 85%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.devs .dev img {
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0.9;
+  transition: 400ms;
+}
+
+.devs .dev img:hover {
+  opacity: initial;
+}
+
+.devs .dev h4 {
+  font-weight: normal;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: var(--white-color);
+  font-size: 14px;
+}

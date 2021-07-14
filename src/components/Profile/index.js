@@ -3,11 +3,13 @@
 import styles from './styles.module.css';
 
 export default function Profile() {
+  const githubUser = "guilhermelima18";
+
   return (
     <div className={styles.cardProfile}>
       <div className={styles.header}>
         <img
-          src="https://avatars.githubusercontent.com/u/60123147?v=4"
+          src={`https://github.com/${githubUser}.png`}
           alt="Imagem de perfil"
         />
         <h2>Guilherme Lima</h2>
