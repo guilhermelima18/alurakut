@@ -70,3 +70,32 @@
 .apps a img {
   margin-right: 10px;
 }
+
+@media (max-width: 1000px) {
+  .cardProfile {
+    width: 70%;
+    min-width: 350px;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+
+  .header {
+    width: 100%;
+    align-items: center;
+    margin: 10px auto;
+  }
+
+  .header img {
+    max-width: 300px;
+  }
+
+  .main {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .apps {
+    width: 100%;
+    margin: 20px auto;
+  }
+}

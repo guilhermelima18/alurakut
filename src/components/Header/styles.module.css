@@ -79,3 +79,23 @@
 .logOut span input[type=search]::placeholder {
   color: var(--white-color);
 }
+
+@media (max-width: 1000px) {
+  .nav {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .navegation {
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0;
+  }
+
+  .logOut {
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0;
+  }
+}
