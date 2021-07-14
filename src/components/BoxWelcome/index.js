@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 
+import Form from '../Form';
 import styles from './styles.module.css';
 
 export default function BoxWelcome() {
@@ -81,7 +82,7 @@ export default function BoxWelcome() {
           <a href="/">Escrever depoimento</a>
           <a href="/">Deixar recado</a>
         </div>
-        <input type="text" placeholder="Qual vai ser o nome da sua comunidade?" />
+        <Form />
       </section>
     </div>
   );

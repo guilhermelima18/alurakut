@@ -1,5 +1,5 @@
 .welcomeArea {
-  max-width: 600px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   margin: 15px 10px;
@@ -84,7 +84,7 @@
 
 .welcomeArea .actions .toDo a {
   background-color: #D9E6F6;
-  padding: 10px;
+  padding: 15px;
   border-radius: 15px;
   margin-right: 15px;
   color: #2E7BB4;
@@ -98,17 +98,42 @@
   color: var(--white-color);
 }
 
-.welcomeArea .actions input[type=text] {
-  background-color: #F4F4F4;
+.welcomeArea .actions form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcomeArea .actions form input {
+  background-color: var(--footer-color);
+  width: 100%;
   border: 0;
   outline: none;
   border-radius: 15px;
-  padding: 10px;
+  padding: 15px;
+  margin: 5px 0;
+}
+
+.welcomeArea .actions form button {
+  background-color: var(--primary-color);
+  width: 250px;
+  padding: 15px;
+  border: 0;
+  outline: none;
+  margin: 15px 0;
+  cursor: pointer;
+  color: var(--white-color);
+  border-radius: 15px;
+  transition: 400ms;
+}
+
+.welcomeArea .actions form button:hover {
+  background-color: var(--secondary-color);
 }
 
 @media (max-width: 1000px) {
   .welcomeArea {
-    width: 70%;
+    width: 80%;
     min-width: 350px;
     max-width: 500px;
     margin: 0 auto;

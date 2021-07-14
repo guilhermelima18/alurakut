@@ -19,8 +19,9 @@
   border-radius: 10px;
 }
 
-.header h2 {
+.header h2 a {
   color: var(--primary-color);
+  font-weight: bold;
 }
 
 .header span {
@@ -73,7 +74,7 @@
 
 @media (max-width: 1000px) {
   .cardProfile {
-    width: 70%;
+    width: 80%;
     min-width: 350px;
     max-width: 500px;
     margin: 20px auto;
@@ -81,12 +82,13 @@
 
   .header {
     width: 100%;
-    align-items: center;
+    
     margin: 10px auto;
   }
 
   .header img {
     max-width: 300px;
+    margin: 0 auto 30px;
   }
 
   .main {

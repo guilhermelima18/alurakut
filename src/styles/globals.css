@@ -7,10 +7,13 @@
 
 :root {
   --header-color: #5C9ECF;
+  --footer-color: #BBCDE8;
   --input-search: #5579A1;
   --white-color: #FFF;
   --email-color: #2F4A71;
   --primary-color: #2E7BB4;
+  --secondary-color: #388BB0;
+  --gray2: #5A5A5A;
 }
 
 body {

@@ -12,7 +12,11 @@ export default function Profile() {
           src={`https://github.com/${githubUser}.png`}
           alt="Imagem de perfil"
         />
-        <h2>Guilherme Lima</h2>
+        <h2>
+          <a href={`https://github.com/${githubUser}`} target="_blank" rel="noreferrer">
+            @{githubUser}
+          </a>
+        </h2>
         <span>
           masculino, <br />
           solteiro(a) <br />
