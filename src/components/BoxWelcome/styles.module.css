@@ -1,5 +1,10 @@
-.welcomeArea {
+.content {
   flex: 1;
+  display: flex;
+}
+
+.welcomeArea {
+  width: 60%;
   display: flex;
   flex-direction: column;
   margin: 15px 10px;
@@ -131,16 +136,34 @@
   background-color: var(--secondary-color);
 }
 
+.content .relations {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 15px 10px;
+}
+
 @media (max-width: 1000px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content .relations {
+    width: 80%;
+    min-width: 350px;
+    max-width: 500px;
+    margin: 10px 0;
+  }
+
   .welcomeArea {
     width: 80%;
     min-width: 350px;
     max-width: 500px;
-    margin: 0 auto;
   }
 }
 
-@media (max-width: 548px) {
+@media (max-width: 600px) {
   .welcomeArea .welcome .itemsGroup {
     flex-direction: column;
   }

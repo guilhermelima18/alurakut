@@ -4,9 +4,10 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  padding: 0 10px;
 }
 
-.content .relationsArea {
+.content .relations {
   max-width: 450px;
   flex: 1;
   margin: 15px 10px;
@@ -14,8 +15,8 @@
   flex-direction: column;
 }
 
-.content .relationsArea .boxDevs,
-.content .relationsArea .boxCommunities {
+.content .relations .boxDevs,
+.content .relations .boxCommunities {
   background-color: var(--white-color);
   width: 100%;
   border-radius: 10px;
@@ -25,8 +26,8 @@
   margin-bottom: 20px;
 }
 
-.content .relationsArea .boxDevs a,
-.content .relationsArea .boxCommunities a {
+.content .relations .boxDevs a,
+.content .relations .boxCommunities a {
   color: var(--primary-color);
   font-weight: bold;
   font-size: 14px;
@@ -37,14 +38,14 @@
     flex-direction: column;
   }
 
-  .content .relationsArea {
+  .content .relations {
     width: 80%;
     min-width: 350px;
     max-width: 500px;
     margin: 0 auto;
   }
 
-  .content .relationsArea .boxDevs {
+  .content .relations .boxDevs {
     margin-top: 20px;
   }
 }
