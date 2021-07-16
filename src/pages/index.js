@@ -17,7 +17,7 @@ export default function Home() {
         <Profile />
         <BoxWelcome />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

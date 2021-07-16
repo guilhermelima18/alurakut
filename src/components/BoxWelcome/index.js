@@ -66,37 +66,6 @@ export default function BoxWelcome() {
                 0
               </a>
             </div>
-            <div className={styles.item}>
-              <p>Mensagens</p>
-              <a href="/">
-                <img src="/icons/email.svg" alt="Mensagens" />
-                0
-              </a>
-            </div>
-            <div className={styles.item}>
-              <p>Confiável</p>
-              <a href="/">
-                <img src="/icons/smile.svg" alt="Confiável" />
-                <img src="/icons/smile.svg" alt="Confiável" />
-                <img src="/icons/smile.svg" alt="Confiável" />
-              </a>
-            </div>
-            <div className={styles.item}>
-              <p>Legal</p>
-              <a href="/">
-                <img src="/icons/cube.svg" alt="Legal" />
-                <img src="/icons/cube.svg" alt="Legal" />
-                <img src="/icons/cube.svg" alt="Legal" />
-              </a>
-            </div>
-            <div className={styles.item}>
-              <p>Sexy</p>
-              <a href="/">
-                <img src="/icons/heart.svg" alt="Sexy" />
-                <img src="/icons/heart.svg" alt="Sexy" />
-                <img src="/icons/heart.svg" alt="Sexy" />
-              </a>
-            </div>
           </div>
         </section>
         <section className={styles.actions}>

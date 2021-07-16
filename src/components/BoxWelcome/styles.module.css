@@ -42,15 +42,19 @@
 
 .welcomeArea .welcome .itemsGroup {
   display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .welcomeArea .welcome .itemsGroup .item {
+  margin: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5px;
+}
+
+.welcomeArea .welcome .itemsGroup .item:first-child {
+  margin-left: 0;
 }
 
 .welcomeArea .welcome .itemsGroup .item p {
@@ -161,14 +165,8 @@
     min-width: 350px;
     max-width: 500px;
   }
-}
 
-@media (max-width: 600px) {
-  .welcomeArea .welcome .itemsGroup {
-    flex-direction: column;
-  }
-
-  .welcomeArea .welcome .itemsGroup .item {
-    margin: 5px 0;
+  .welcomeArea .welcome {
+    align-items: center;
   }
 }
