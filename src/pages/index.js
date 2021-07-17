@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Header from "../components/Header";
 import Profile from "../components/Profile";
 import BoxWelcome from '../components/BoxWelcome';
-import Footer from '../components/Footer';
 
 import styles from '../styles/Home.module.css';
 
@@ -17,7 +16,6 @@ export default function Home() {
         <Profile />
         <BoxWelcome />
       </div>
-      {/* <Footer /> */}
     </>
   );
 };

@@ -18,12 +18,23 @@ export default function BoxWelcome() {
     const dataForm = new FormData(event.target);
 
     const comunidade = {
-      id: new Date().toISOString(),
       title: dataForm.get('title'),
-      image: dataForm.get('image')
+      imageUrl: dataForm.get('image'),
+      creatorSlug: 'guilhermelima18'
     };
 
-    setCommunities([...community, comunidade]);
+    fetch('/api/communities', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(comunidade)
+    })
+      .then(async (response) => {
+        const dados = await response.json();
+        setCommunities([...community, dados.record]);
+      })
+
     setTitle('');
     setImage('');
   };
@@ -99,7 +110,7 @@ export default function BoxWelcome() {
       </div>
       <div className={styles.relations}>
         <BoxDevs />
-        <BoxCommunities community={community} setCommunities={setCommunities} />
+        <BoxCommunities />
       </div>
     </div>
   );
