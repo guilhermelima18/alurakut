@@ -1,25 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { useEffect, useState } from 'react';
+
 import styles from './styles.module.css';
 
-export default function Profile() {
-  const githubUser = "guilhermelima18";
+export default function Profile(user) {
+  const userProfile = user.props;
+  const [name, setName] = useState([]);
 
+  useEffect(() => {
+    fetch(`https://api.github.com/users/${userProfile}`)
+      .then(response => response.json())
+      .then(data => setName(data))
+  }, []);
+  
   return (
     <div className={styles.cardProfile}>
       <div className={styles.header}>
         <img
-          src={`https://github.com/${githubUser}.png`}
+          src={`https://github.com/${userProfile}.png`}
           alt="Imagem de perfil"
         />
         <h2>
-          <a href={`https://github.com/${githubUser}`} target="_blank" rel="noreferrer">
-            @{githubUser}
+          <a href={`https://github.com/${userProfile}`} target="_blank" rel="noreferrer">
+            {name.name}
           </a>
         </h2>
         <span>
-          masculino, <br />
-          solteiro(a) <br />
           Brasil
         </span>
       </div>

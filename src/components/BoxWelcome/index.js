@@ -7,7 +7,9 @@ import BoxDevs from '../BoxDevs';
 
 import styles from './styles.module.css';
 
-export default function BoxWelcome() {
+export default function BoxWelcome(user) {
+  const userWelcome = user.props;
+
   const [community, setCommunities] = useState([]);
   const [title, setTitle] = useState([]);
   const [image, setImage] = useState([]);
@@ -20,7 +22,7 @@ export default function BoxWelcome() {
     const comunidade = {
       title: dataForm.get('title'),
       imageUrl: dataForm.get('image'),
-      creatorSlug: 'guilhermelima18'
+      creatorSlug: userWelcome
     };
 
     fetch('/api/communities', {
@@ -43,7 +45,7 @@ export default function BoxWelcome() {
     <div className={styles.content}>
       <div className={styles.welcomeArea}>
         <section className={styles.welcome}>
-          <h1>Bem-vindo(a), Guilherme</h1>
+          <h1>Bem-vindo(a), {userWelcome}</h1>
           <h5>
             Sorte de hoje:
             <span> O melhor profeta do futuro é o passado</span>
@@ -91,7 +93,7 @@ export default function BoxWelcome() {
               type="text"
               name="title"
               placeholder="Qual vai ser o nome da sua comunidade?"
-              onChange={() => setTitle(event.target.value)}
+              onChange={(event) => setTitle(event.target.value)}
               value={title}
               maxLength="20"
               required
@@ -100,7 +102,7 @@ export default function BoxWelcome() {
               type="url"
               name="image"
               placeholder="Coloque uma URL para sua capa"
-              onChange={() => setImage(event.target.value)}
+              onChange={(event) => setImage(event.target.value)}
               value={image}
               required
             />
@@ -109,7 +111,7 @@ export default function BoxWelcome() {
         </section>
       </div>
       <div className={styles.relations}>
-        <BoxDevs />
+        <BoxDevs user={userWelcome} />
         <BoxCommunities />
       </div>
     </div>

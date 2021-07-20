@@ -5,11 +5,13 @@ import { useEffect, useState } from 'react';
 
 import styles from './styles.module.css';
 
-export default function BoxDevs() {
+export default function BoxDevs(userWelcome) {
+  const userDev = userWelcome.user;
+  
   const [followers, setFollowers] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.github.com/users/guilhermelima18/followers')
+    fetch(`https://api.github.com/users/${userDev}/followers`)
       .then(response => {
         if (response.ok) {
           return response.json();
